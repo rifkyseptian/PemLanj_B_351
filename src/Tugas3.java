@@ -2,17 +2,31 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-// Class Barang merepresentasikan barang yang dibeli
+/**
+ * Class Barang menyimpan informasi detail mengenai barangg
+ * seperti nama, harga satuan, dan jumlah barang yang di kembalikan
+ */
 class Barang {
     private String nama;
     private double harga;
     private int jumlah;
+
+    /**
+     * Konstruktor untuk instalasi objek Barang
+     * @param nama
+     * @param harga
+     * @param jumlah
+     */
 
     public Barang(String nama, double harga, int jumlah) {
         this.nama = nama;
         this.harga = harga;
         this.jumlah = jumlah;
     }
+
+    /**
+     * @return Harga satuan barang
+     */
 
     public String getNama() {
         return nama;
@@ -94,7 +108,7 @@ public class Tugas3 {
             lanjut = input.next().toLowerCase().charAt(0);
             input.nextLine();
 
-        } while (lanjut == 'ya');
+        } while (lanjut == 'y');
 
         pengembalian.tampilkanDaftarPengembalian();
 
